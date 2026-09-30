@@ -1,0 +1,32 @@
+return {
+    "stevearc/conform.nvim",
+    event = { "BufReadPre", "BufNewFile" },
+    opts = {
+        formatters_by_ft = {
+            javascript = { "prettier" },
+            typescript = { "prettier" },
+            javascriptreact = { "prettier" },
+            typescriptreact = { "prettier" },
+            css = { "prettier" },
+            html = { "prettier" },
+            json = { "prettier" },
+            yaml = { "prettier" },
+            markdown = { "prettier" },
+            htmldjango = { "prettier" },
+            liquid = { "prettier" },
+            lua = { "stylua" },
+            python = { "black" },
+            haskell = { "ormolu" },
+            java = { "google-java-format" },
+            rust = { "rustfmt" },
+            c = { "clang_format" },
+            nix = { "nixfmt" },
+            ["_"] = { "trim_whitespace" },
+        },
+        format_on_save = {
+            lsp_format = "fallback",
+            async = false,
+            timeout_ms = 1000,
+        },
+    },
+}
