@@ -61,11 +61,18 @@
     extraGroups = [ "networkmanager" "wheel" ];
   };
 
+  # Container bullshit
+  virtualisation.podman.enable = true;
+  
+  # Programs
   programs.firefox.enable = true;
   programs.steam.enable = true;
+
+  # Experimental Features
   nixpkgs.config.allowUnfree = true;
   nix.settings.experimental-features = [ "nix-command" "flakes" ];
 
+  # Main package list
   environment.systemPackages = with pkgs; [
     htop hyfetch chromium tmux
     git python3 kitty neovim dms-shell quickshell dgop cava playerctl
