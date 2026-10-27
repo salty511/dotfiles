@@ -76,7 +76,8 @@
     lua-language-server stylua efm-langserver
     pyright ruff
     nodejs typescript typescript-language-server prettierd eslint
-    luarocks
+    luarocks pkgs.github-cli
+    podman podman-compose docker docker-compose
   ];
   fonts.packages = with pkgs; [ nerd-fonts.jetbrains-mono noto-fonts ];
   environment.sessionVariables = {
